@@ -1,0 +1,59 @@
+version: '20.10.12' # specify docker-compose version
+
+# Define the services/containers to be run
+services:
+  front:
+    container_name: front-container
+    build: front
+    ports:
+      - "8000:80" # specify port forewarding
+    networks:
+      - app
+
+  node: #name of the second service
+    container_name: node-container
+    build: node # specify the directory of the Dockerfile
+    ports:
+      - "3000:3000" #specify ports forewarding
+    links:
+      - mongo
+    networks:
+      - app
+
+  spring: #name of the second service
+    container_name: spring-container
+    build: springboot-mongodb-crud # specify the directory of the Dockerfile
+    ports:
+      - "8080:8080" #specify ports forewarding
+    links:
+      - mongo2
+    networks:
+      - app
+  
+
+  mongo: # name of the third service
+    image: mongo # specify image to build container from
+    ports:
+      - "27018:27017" # specify port forewarding
+    volumes:
+      - mongo-data:/data/db
+    networks:
+      - app
+
+  mongo2: # name of the third service
+    image: mongo:latest # specify image to build container from
+    hostname: mongo
+    ports:
+      - "27017:27017" # specify port forewarding
+    volumes:
+      - mongo-spring-data:/data/db
+    networks:
+      - app
+networks:
+  app:
+    driver: bridge
+volumes:
+  mongo-data:
+    driver: local
+  mongo-spring-data:
+    driver: local

@@ -1,0 +1,19 @@
+[{
+  "_id": 14354088,
+  "firstName": "jouhaina",
+  "lastName": "nasri",
+  "adresse": "manouba",
+  "codepermis": "123456",
+  "matricule": "183Tunis",
+  "infractions": "Crime de meurtre",
+  "_class": "com.project.ministre.model.Citoyen"
+},{
+  "_id": 14368216,
+  "firstName": "hadir",
+  "lastName": "nasri",
+  "adresse": "tunis",
+  "codepermis": "5555",
+  "matricule": "189Tun",
+  "infractions": "Néant",
+  "_class": "com.project.ministre.model.Citoyen"
+}]

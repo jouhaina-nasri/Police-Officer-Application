@@ -1,0 +1,21 @@
+[{
+  "_id": {
+    "$oid": "61e5519414608122e602a893"
+  },
+  "cin": "14354088",
+  "recherche": "carte de dépôt de prison : le 15 NOV 2020",
+  "infractions": "Aucune infraction",
+  "nom": "nasri",
+  "prenom": "jouhaina",
+  "sexe": "female"
+},{
+  "_id": {
+    "$oid": "61e55940c801a4b8982e94c3"
+  },
+  "cin": "14368216",
+  "recherche": "Divorce Pension alimentaire le 20 oct 2020",
+  "infractions": "infraction routière : 60Dt",
+  "nom": "nasri",
+  "prenom": "hadir",
+  "sexe": "female"
+}]
